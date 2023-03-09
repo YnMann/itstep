@@ -4,6 +4,8 @@
 
 function timeReverse(time){
     time = Number(prompt(`Введите секунды`));
+    // VN: то же, что и в № 5 - условие задачи фактически не выполнено!
+
 
     let hour = Math.floor(time / 3600);
     let minutes = Math.floor(time / 60) % 60;
@@ -46,7 +48,8 @@ function timeReverse(time){
     }
 
     let result = hour + minutes + seconds;
-    return alert(result);
+    return alert(result);  // VN: "... и возвращает в виде строки «чч:мм:сс»."
+                           // Ваша же функция возвращает undefined
 }
 
 timeReverse();

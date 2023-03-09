@@ -20,6 +20,9 @@ function perfectNum(num){
 function rangePerfectNum(min, max){
     min = Number(prompt("Укажите минимальное значение диапазона"));
     max = Number(prompt("Укажите максимальное значение диапазона"));
+    // VN: условие задачи фактически не выполнено!
+    // вызов rangePerfectNum(10, 50) не выдаст мне совершенные числа в этом диапазоне
+
 
     for(; (min <= max); min++){
         if(min === perfectNum(min));

@@ -3,7 +3,7 @@
 
 let inputMass = prompt(`Введите массив`);
 
-function transformInMassive(massive = []) {
+function transformInMassive(massive = []) { // VN: То же, что и в №1 - вы все числа разбиваете на цифры, работаете с глобальным контекстом..
     for (i of inputMass) {
         if (!isNaN(i)) massive.push(i); 
     }
@@ -11,7 +11,7 @@ function transformInMassive(massive = []) {
     return massive;
 }
 
-function min(massive = transformInMassive()) {
+function min(massive = transformInMassive()) { 
     let minimum = massive[0];
 
     for (let number of massive) {

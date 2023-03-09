@@ -6,8 +6,8 @@ let squareRectangle, squareArea;
 let a = Number(prompt("Введите длину:"));
 let b = Number(prompt("Введите ширину:"));
 
-function square(){
-    if(b === 0){
+function square(){   // VN: функция должна принимать длину и ширину в качестве аргументов!
+    if(b === 0){     // использовать глобальные переменные внутри функции - очень плохая практика
         squareArea = Math.pow(a, 2);
         return squareArea;
     } else{

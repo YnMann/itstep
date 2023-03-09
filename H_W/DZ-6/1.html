@@ -6,7 +6,9 @@ let inputNumber = prompt("Введите массив:");
 // Превращаем в массив промпт
 
 function transformInMassive(resultArray = []){
-    for (i of inputNumber) { 
+    for (i of inputNumber) {    // VN: 1. Не работайте с глобальными переменными из функций
+                                //     2. Такой алгоритм не позволяет пользователю ввести 
+                                // двухзначные, трехзначные числа и тд. Вы их разбиваете на цифры
         if(!isNaN(i)) resultArray.push(i); 
     }
 
