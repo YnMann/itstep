@@ -8,7 +8,7 @@ let inputMass = prompt('Введите массив:');
 let massive = [];
 let error = 'введите данные снова.';
 
-for (i of inputMass) { 
+for (i of inputMass) {  // VN: То же, что и в №1 - вы все числа разбиваете на цифры
     if (!isNaN(i)) massive.push(i); 
 }
 
@@ -17,8 +17,10 @@ for (i of inputMass) {
 function tests_() {
     
     if (massive.length > 10) {
-        for (let i = 0; massive.length !== 10; i++) {
-            massive.pop();
+        for (let i = 0; massive.length !== 10; i++) { // VN: а это прикольное решение
+        // while (massive.length > 10) -- читабельнее, всё же
+            massive.pop();  // VN: то же, что и в №1 - вы работаете с глобальным контекстом,
+                            // да ещё и изменяете его. Вы не жалеете себя)
         }
 
         return massive;
